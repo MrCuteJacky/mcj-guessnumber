@@ -5,7 +5,7 @@
             <div class="form-group row">
                 <div class="col-sm-12">
                     <div class="input-group">
-                        <input class="form-control form-control-sm" id="answer" name="answer" placeholder="Please enter your answer." [(ngModel)]="answer" pattern='^[0-9]{4}$' required />
+                        <input type="number" class="form-control form-control-sm" id="answer" name="answer" placeholder="Please enter your answer." [(ngModel)]="answer" pattern='^[0-9]{4}$' required />
                         <div class="input-group-append">
                             <button class="btn btn-dark btn-sm" (click)="validate()" [disabled]="form.invalid">Submit</button>
                         </div>
