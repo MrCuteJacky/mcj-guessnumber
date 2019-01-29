@@ -28,13 +28,16 @@ export class GuessnumberService {
     if (this.answer != input) {
       var a = 0, b = 0;
       var answers = Array.from(this.answer);
-      Array.from(input).forEach((word, index) => {
-        if (word == answers[index]) {
+      var inputs = Array.from(input);
+      answers.forEach((answer, index) => {
+        if (answer == inputs[index]) {
           a++;
+          return;
         } else {
-          answers.forEach(answer => {
-            if (word == answer) {
+          inputs.forEach(input => {
+            if (input == answer) {
               b++;
+              return;
             }
           });
         }
