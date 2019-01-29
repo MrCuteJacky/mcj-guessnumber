@@ -37,6 +37,7 @@ export class GuessnumberComponent implements OnInit {
   validate(): void {
     try {
       this.guessnumberService.validate(this.answer);
+      this.logs.unshift(new Log(this.answer, '4A'));
       this.win();
     } catch (error) {
       console.log(error);

@@ -20,6 +20,7 @@ export class GuessnumberService {
         return template != number;
       });
     }
+    console.log(this.answer);
   }
 
   validate(input: string): void {
