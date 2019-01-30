@@ -26,7 +26,7 @@
                 <tr *ngFor="let log of logs; index as i">
                     <th class="text-justify py-2"><small>{{logs.length - i}}</small></th>
                     <td class="text-justify py-2" *ngIf="log.result != '4A'"><small>您輸入的 <mark>{{log.input}}</mark> 結果為 <mark>{{log.result}}</mark>，請再加把勁！</small></td>
-                    <td class="text-justify py-2" *ngIf="log.result == '4A'"><small>您輸入的 <mark>{{log.input}}</mark>，恭喜你成功了！</small></td>
+                    <td class="text-justify py-2" *ngIf="log.result == '4A'"><small>您輸入的 <mark>{{log.input}}</mark>，恭喜您成功了！</small></td>
                 </tr>
                 <tr *ngIf="logs.length == 0">
                     <td class="text-secondary"></td>
