@@ -9,7 +9,7 @@
     <div class="card-footer text-white bg-secondary">
         <form class="form" #form="ngForm">
             <div class="input-group">
-                <input class="form-control form-control-sm" id="answer" name="answer" placeholder="請輸入四位數字密碼" [(ngModel)]="answer" pattern='^[0-9]{4}$' maxlength="4" required />
+                <input type="tel" class="form-control form-control-sm" id="answer" name="answer" placeholder="請輸入四位數字密碼" [(ngModel)]="answer" pattern='^[0-9]{4}$' maxlength="4" required />
                 <div class="input-group-append">
                     <button class="btn btn-dark btn-sm" (click)="validate()" [disabled]="form.invalid">送出</button>
                 </div>
