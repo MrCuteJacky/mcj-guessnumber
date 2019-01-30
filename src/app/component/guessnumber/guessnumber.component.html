@@ -1,15 +1,17 @@
 <div style="height: 100vh">
     <app-header [title]="title"></app-header>
     <div class="card-body text-white bg-secondary">
+        <small>
+            <p class="text-justify font-weight-bold mb-1">遊戲說明</p>
+            <p class="text-justify mb-0">經典的猜數字小遊戲，請努力猜出四位數字密碼，A 代表數字及位置都正確，B 代表數字正確但位置不對。</p>
+        </small>
+    </div>
+    <div class="card-footer text-white bg-secondary">
         <form class="form" #form="ngForm">
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <div class="input-group">
-                        <input class="form-control form-control-sm" id="answer" name="answer" placeholder="Please enter your answer." [(ngModel)]="answer" pattern='^[0-9]{4}$' required />
-                        <div class="input-group-append">
-                            <button class="btn btn-dark btn-sm" (click)="validate()" [disabled]="form.invalid">Submit</button>
-                        </div>
-                    </div>
+            <div class="input-group">
+                <input class="form-control form-control-sm" id="answer" name="answer" placeholder="請輸入四位數字密碼" [(ngModel)]="answer" pattern='^[0-9]{4}$' maxlength="4" required />
+                <div class="input-group-append">
+                    <button class="btn btn-dark btn-sm" (click)="validate()" [disabled]="form.invalid">送出</button>
                 </div>
             </div>
         </form>
@@ -17,18 +19,18 @@
     <div class="table-responsive">
         <table class="table table-striped table-hover">
             <thead>
-                <th>no</th>
-                <th>input</th>
-                <th>result</th>
+                <th>#</th>
+                <th class="w-100">結果</th>
             </thead>
             <tbody>
                 <tr *ngFor="let log of logs; index as i">
-                    <td class="text-justify py-2">{{logs.length - i}}</td>
-                    <td class="text-justify py-2">{{log.answer}}</td>
-                    <td class="text-justify py-2">{{log.message}}</td>
+                    <th class="text-justify py-2"><small>{{logs.length - i}}</small></th>
+                    <td class="text-justify py-2" *ngIf="log.result != '4A'"><small>您輸入的 <mark>{{log.input}}</mark> 結果為 <mark>{{log.result}}</mark>，請再加把勁！</small></td>
+                    <td class="text-justify py-2" *ngIf="log.result == '4A'"><small>您輸入的 <mark>{{log.input}}</mark>，恭喜你成功了！</small></td>
                 </tr>
                 <tr *ngIf="logs.length == 0">
-                    <td colspan="3" class="text-secondary">There is no log.</td>
+                    <td class="text-secondary"></td>
+                    <td class="text-secondary"><small>無</small></td>
                 </tr>
             </tbody>
         </table>
@@ -43,13 +45,12 @@
 <div id="toast" class="toast">
     <div class="toast-header">
         <img src="assets/images/logo.png" class="rounded mr-2" width="20" height="20" alt="...">
-        <strong class="mr-auto">You win!!</strong>
-        <small>now</small>
+        <strong class="mr-auto">猜對了！！</strong>
         <button type="button" class="ml-2 mb-1 close" (click)="init()">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="toast-body">
-        You entered {{logs.length}} times!
+        您共輸入了 {{logs.length}} 次！
     </div>
 </div>

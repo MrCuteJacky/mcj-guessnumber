@@ -1,10 +1,10 @@
 export class Log {
 
-    answer: string;
-    message: string;
+    input: string;
+    result: string;
 
-    constructor(answer: string, message: string) {
-        this.answer = answer;
-        this.message = message;
+    constructor(input: string, result: string) {
+        this.input = input;
+        this.result = result;
     }
 }

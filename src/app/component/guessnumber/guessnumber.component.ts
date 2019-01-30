@@ -13,7 +13,7 @@ declare var Fireworks: any;
 })
 export class GuessnumberComponent implements OnInit {
 
-  title: string = "GuessNumber";
+  title: string = "終極密碼";
 
   answer: string;
 
