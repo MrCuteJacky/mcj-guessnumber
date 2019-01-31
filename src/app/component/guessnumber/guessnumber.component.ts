@@ -21,9 +21,9 @@ export class GuessnumberComponent implements OnInit {
 
   message: string;
 
-  constructor(
-    private guessnumberService: GuessnumberService
-  ) { }
+  constructor(private guessnumberService: GuessnumberService) {
+    
+  }
 
   ngOnInit() {
     this.init();
