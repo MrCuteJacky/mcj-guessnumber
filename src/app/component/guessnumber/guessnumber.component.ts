@@ -19,6 +19,8 @@ export class GuessnumberComponent implements OnInit {
 
   logs: Log[] = [];
 
+  message: string;
+
   constructor(
     private guessnumberService: GuessnumberService
   ) { }
@@ -47,6 +49,16 @@ export class GuessnumberComponent implements OnInit {
   }
 
   win(): void {
+
+    if (this.logs.length == 1) {
+      this.message = '太幸運了';
+    } else if (this.logs.length <= 3) {
+      this.message = '絕世高手';
+    } else if (this.logs.length <= 5) {
+      this.message = '高手';
+    } else if (this.logs.length <= 8) {
+      this.message = '不錯哦';
+    }
     $('#canvas-container').fadeIn(500, () => {
       new Fireworks().start();
       setTimeout(() => {
