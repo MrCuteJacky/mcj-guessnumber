@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --output-path docs --base-href",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -19,13 +19,15 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
+    "bootstrap": "4.5.3",
+    "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-    "bootstrap": "4.5.3",
-    "popper.js": "^1.16.1",
-    "core-js": "^2.5.4",
-    "jquery": "^3.3.1"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1002.0",

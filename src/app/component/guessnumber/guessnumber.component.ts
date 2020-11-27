@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { GuessnumberService } from 'src/app/service/guessnumber.service';
-import { Log } from 'src/app/vo/log';
+import {Component, OnInit} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
+import {GuessnumberService} from 'src/app/service/guessnumber.service';
+import {Log} from 'src/app/vo/log';
 
 import * as $ from 'jquery';
+import {FormGroup} from '@angular/forms';
 
 declare var Fireworks: any;
 
@@ -13,16 +15,21 @@ declare var Fireworks: any;
 })
 export class GuessnumberComponent implements OnInit {
 
-  title = '終極密碼';
-
-  answer: string;
+  form: FormGroup;
 
   logs: Log[] = [];
 
-  message: string;
+  answer: string;
 
-  constructor(private guessnumberService: GuessnumberService) {
+  level: string;
 
+  constructor(private translate: TranslateService, private guessnumberService: GuessnumberService) {
+
+    translate.addLangs(['zh', 'en']);
+    translate.setDefaultLang('zh');
+
+    const broswerLang = translate.getBrowserLang();
+    translate.use(broswerLang.match(/en|zh/) ? broswerLang : 'zh');
   }
 
   ngOnInit(): void {
@@ -50,13 +57,13 @@ export class GuessnumberComponent implements OnInit {
   win(): void {
 
     if (this.logs.length === 1) {
-      this.message = '太幸運了';
+      this.level = 'lucky';
     } else if (this.logs.length <= 3) {
-      this.message = '絕世高手';
+      this.level = 'perfect';
     } else if (this.logs.length <= 5) {
-      this.message = '高手';
+      this.level = 'great';
     } else if (this.logs.length <= 8) {
-      this.message = '不錯哦';
+      this.level = 'good';
     }
     $('#canvas-container').fadeIn(500, () => {
       new Fireworks().start();

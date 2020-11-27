@@ -35,6 +35,12 @@ MIT
 @angular/platform-browser
 MIT
 
+@ngx-translate/core
+MIT
+
+@ngx-translate/http-loader
+MIT
+
 bootstrap
 MIT
 The MIT License (MIT)
