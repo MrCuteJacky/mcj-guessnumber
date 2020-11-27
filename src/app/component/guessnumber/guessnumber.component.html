@@ -11,7 +11,7 @@
             <div class="input-group">
                 <input type="tel" class="form-control form-control-sm" id="answer" name="answer" [placeholder]="'form.answer-placeholder' | translate" [(ngModel)]="answer" pattern='^[0-9]{4}$' maxlength="4" required />
                 <div class="input-group-append">
-                    <button class="btn btn-dark btn-sm" (click)="validate()" [disabled]="form.invalid">{{'form.submit' | translate}}</button>
+                    <button tag="mcj-guessnumber" class="btn btn-dark btn-sm ga-gussnumber" (click)="validate()" [disabled]="form.invalid">{{'form.submit' | translate}}</button>
                 </div>
             </div>
         </form>
