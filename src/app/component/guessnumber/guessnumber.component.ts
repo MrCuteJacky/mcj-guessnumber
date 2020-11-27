@@ -9,11 +9,11 @@ declare var Fireworks: any;
 @Component({
   selector: 'app-guessnumber',
   templateUrl: './guessnumber.component.html',
-  styleUrls: ['./guessnumber.component.sass']
+  styleUrls: ['./guessnumber.component.scss']
 })
 export class GuessnumberComponent implements OnInit {
 
-  title: string = "終極密碼";
+  title = '終極密碼';
 
   answer: string;
 
@@ -22,10 +22,10 @@ export class GuessnumberComponent implements OnInit {
   message: string;
 
   constructor(private guessnumberService: GuessnumberService) {
-    
+
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.init();
   }
 
@@ -42,15 +42,14 @@ export class GuessnumberComponent implements OnInit {
       this.logs.unshift(new Log(this.answer, '4A'));
       this.win();
     } catch (error) {
-      console.log(error);
-      this.logs.unshift(new Log(this.answer, error));
+      this.logs.unshift(new Log(this.answer, error.message));
     }
     this.answer = null;
   }
 
   win(): void {
 
-    if (this.logs.length == 1) {
+    if (this.logs.length === 1) {
       this.message = '太幸運了';
     } else if (this.logs.length <= 3) {
       this.message = '絕世高手';
