@@ -23,19 +23,22 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "allowedCommonJsDependencies": [
+              "jquery"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/scripts/prefixfree.min.js",
-              "src/assets/scripts/firework.js"
+              "src/scripts/prefixfree.min.js",
+              "src/scripts/firework.js"
             ]
           },
           "configurations": {
@@ -98,14 +101,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/scripts/prefixfree.min.js",
-              "src/assets/scripts/firework.js"
+              "src/scripts/prefixfree.min.js",
+              "src/scripts/firework.js"
             ]
           }
         },
