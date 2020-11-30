@@ -6,7 +6,9 @@ import {Log} from 'src/app/vo/log';
 import * as $ from 'jquery';
 import {FormGroup} from '@angular/forms';
 
-declare var Fireworks: any;
+declare let Fireworks: any;
+
+declare let gtag: any;
 
 @Component({
   selector: 'app-guessnumber',
@@ -45,6 +47,7 @@ export class GuessnumberComponent implements OnInit {
 
   validate(): void {
     try {
+      gtag('event', 'Guess', {event_category: 'Click', event_label: 'Guess', value: ''});
       this.guessnumberService.validate(this.answer);
       this.logs.unshift(new Log(this.answer, '4A'));
       this.win();
@@ -65,6 +68,7 @@ export class GuessnumberComponent implements OnInit {
     } else if (this.logs.length <= 8) {
       this.level = 'good';
     }
+    gtag('event', 'Win', {event_category: 'Click', event_label: 'Guess', value: this.level});
     $('#canvas-container').fadeIn(500, () => {
       new Fireworks().start();
       setTimeout(() => {
