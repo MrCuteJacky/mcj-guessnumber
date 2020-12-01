@@ -36,7 +36,6 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "modules/firework/prefixfree.min.js",
               "modules/firework/firework.js"
             ]
@@ -106,7 +105,6 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "modules/firework/prefixfree.min.js",
               "modules/firework/firework.js"
             ]

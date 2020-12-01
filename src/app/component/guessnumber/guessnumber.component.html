@@ -45,8 +45,11 @@
     <div class="toast-header p-2">
         <img src="assets/images/logo.png" class="rounded mr-2" width="20" height="20" alt="...">
         <strong class="mr-auto">{{'toast.title' | translate}}</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" (click)="init()">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="toast-body">
-        {{'toast.' + level | translate}}{{'toast.message' | translate: {count: logs.length} }}<a href="#" class="text-decoration-none" (click)="init()">{{'toast.again' | translate}}</a>{{'toast.end' | translate}}
+        {{'toast.' + level | translate}}{{'toast.message' | translate: {count: logs.length} }}
     </div>
 </div>
