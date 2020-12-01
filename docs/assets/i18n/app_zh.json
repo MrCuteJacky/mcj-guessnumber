@@ -17,8 +17,6 @@
   "toast": {
     "title": "猜對了！！",
     "message": "，您共輸入了 {{count}} 次！",
-    "again": "再玩一次",
-    "end": "。",
     "lucky": "太幸運了",
     "perfect": "絕世高手",
     "great": "高手",

@@ -17,8 +17,6 @@
   "toast": {
     "title": "You guessed it! !",
     "message": ", you have entered {{count}} times!",
-    "again": "Play again",
-    "end": ".",
     "lucky": "lucky",
     "perfect": "perfect",
     "great": "great",
