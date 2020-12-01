@@ -31,14 +31,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/scripts/prefixfree.min.js",
-              "src/scripts/firework.js"
+              "modules/firework/prefixfree.min.js",
+              "modules/firework/firework.js"
             ]
           },
           "configurations": {
@@ -101,14 +101,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/scripts/prefixfree.min.js",
-              "src/scripts/firework.js"
+              "modules/firework/prefixfree.min.js",
+              "modules/firework/firework.js"
             ]
           }
         },
