@@ -14,6 +14,9 @@ export class AppComponent implements OnInit {
     this.notificationService.register();
 
     navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
+      serviceWorkerRegistration.addEventListener('statechange', event => {
+        console.log('statechange', event);
+      });
       serviceWorkerRegistration.addEventListener('install', event => {
         console.log('install', event);
       });
