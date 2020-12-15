@@ -31,7 +31,7 @@ import {AppRoutingModule} from './app-routing.module';
                 deps: [HttpClient]
             }
         }),
-        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        BrowserModule.withServerTransition({appId: 'serverApp'}),
         FormsModule,
         ReactiveFormsModule,
         ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),

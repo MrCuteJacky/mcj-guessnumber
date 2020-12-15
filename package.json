@@ -4,7 +4,7 @@
   "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "docs": "http-server -p 8080 -c-1 docs",
+    "docs": "ng build --prod --output-path docs; http-server -p 8080 -c-1 docs",
     "start": "ng serve",
     "build": "ng build --prod --output-path docs --base-href /mcj-guessnumber/",
     "test": "ng test",

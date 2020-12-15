@@ -25,7 +25,7 @@
             <tbody>
                 <tr *ngFor="let log of logs; index as i">
                     <th class="text-justify py-2 text-center"><small>{{logs.length - i}}</small></th>
-                    <td class="text-justify py-2" *ngIf="log.result != '4A'" [innerHTML]="'result.error' | translate : [log, log]"></td>
+                    <td class="text-justify py-2" *ngIf="log.result != '4A'" [innerHTML]="'result.error' | translate : log"></td>
                     <td class="text-justify py-2" *ngIf="log.result == '4A'" [innerHTML]="'result.success' | translate : log"></td>
                 </tr>
                 <tr *ngIf="logs.length == 0">
