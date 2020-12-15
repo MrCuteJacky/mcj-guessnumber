@@ -14,8 +14,8 @@ export class NotificationService {
   }
 
   notify(title: string, body: string): void {
-    navigator.serviceWorker.getRegistration().then(reg => {
-      reg.showNotification(title, {body: body, icon: 'assets/images/logo.png'}).then();
+    navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
+      serviceWorkerRegistration.showNotification(title, {body: body, icon: 'assets/images/logo.png'}).then();
     });
   }
 }
