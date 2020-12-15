@@ -9,6 +9,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {GuessnumberComponent} from './component/guessnumber/guessnumber.component';
 import {HeaderComponent} from './component/header/header.component';
 import {FooterComponent} from './component/footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {FooterComponent} from './component/footer/footer.component';
     }),
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [GuessnumberComponent]
