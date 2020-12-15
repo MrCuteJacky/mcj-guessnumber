@@ -5,13 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class NotificationService {
 
-  constructor(private serviceWorkerRegistration: ServiceWorkerRegistration) { }
+  constructor() { }
 
   register(): void {
     Notification.requestPermission().then(r => {});
   }
 
   notify(title: string, body: string): void {
-    this.serviceWorkerRegistration.showNotification(title, {body: body, icon: 'assets/images/logo.png'}).then(r => {});
+    new Notification(title, {body: body, icon: 'assets/images/logo.png'});
+    // this.serviceWorkerRegistration.showNotification(title, {body: body, icon: 'assets/images/logo.png'}).then(r => {});
   }
 }

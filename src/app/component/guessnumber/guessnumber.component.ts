@@ -26,7 +26,9 @@ export class GuessnumberComponent implements OnInit {
 
     level: string;
 
-    constructor(private translate: TranslateService, private guessnumberService: GuessnumberService, private notificationService: NotificationService) {
+    constructor(private translate: TranslateService,
+                private guessnumberService: GuessnumberService,
+                private notificationService: NotificationService) {
 
         translate.addLangs(['zh', 'en']);
         translate.setDefaultLang('zh');
