@@ -5,6 +5,7 @@ import {Log} from 'src/app/vo/log';
 
 import * as $ from 'jquery';
 import {FormGroup} from '@angular/forms';
+import {NotificationService} from '../../service/notification.service';
 
 declare let Fireworks: any;
 
@@ -25,7 +26,7 @@ export class GuessnumberComponent implements OnInit {
 
     level: string;
 
-    constructor(private translate: TranslateService, private guessnumberService: GuessnumberService) {
+    constructor(private translate: TranslateService, private guessnumberService: GuessnumberService, private notificationService: NotificationService) {
 
         translate.addLangs(['zh', 'en']);
         translate.setDefaultLang('zh');
@@ -35,8 +36,8 @@ export class GuessnumberComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        Notification.requestPermission().then(r => {});
         this.init();
+        this.notificationService.register();
     }
 
     init(): void {
@@ -44,10 +45,6 @@ export class GuessnumberComponent implements OnInit {
         this.guessnumberService.generator();
         $('#toast').hide();
         $('#canvas-container').hide();
-    }
-
-    push(): void {
-        const notification = new Notification('提示', {body: '密碼可能是 ' + this.guessnumberService.getAnswer(), icon: 'assets/images/logo.png'});
     }
 
     validate(): void {
@@ -58,7 +55,7 @@ export class GuessnumberComponent implements OnInit {
             this.win();
         } catch (error) {
             this.logs.unshift(new Log(this.answer, error.message));
-            this.push();
+            this.notificationService.notify('提示', '密碼可能是' + this.guessnumberService.getAnswer());
         }
         this.answer = null;
     }
