@@ -4,11 +4,11 @@
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
-  "scope": "/mcj-guessnumber/",
-  "start_url": "/mcj-guessnumber/",
+  "scope": "./",
+  "start_url": "./",
   "icons": [
     {
-      "src": "/mcj-guessnumber/assets/icons/icon.png",
+      "src": "assets/icons/icon.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"

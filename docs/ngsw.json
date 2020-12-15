@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1607994682764,
-  "index": "/mcj-guessnumber/index.html",
+  "timestamp": 1607998500959,
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -13,8 +13,8 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.4cc1a38b869e12a70d3c.js",
-        "/main-es5.4cc1a38b869e12a70d3c.js",
+        "/main-es2015.96f2fce5b1e867c957a4.js",
+        "/main-es5.96f2fce5b1e867c957a4.js",
         "/manifest.webmanifest",
         "/polyfills-es2015.b28caabf4fa861007eeb.js",
         "/polyfills-es5.cb4329a3c9e990575ef8.js",
@@ -50,10 +50,10 @@
     "/assets/images/logo.png": "324f3951d410a4f4d4c24e3d2661143189b076ee",
     "/assets/images/screenshot.png": "9efff6342a5278be9f2875061a8102731cb8500b",
     "/favicon.ico": "408b2a5ffb223ea83abdaff3d02dcec358448997",
-    "/index.html": "99bc33b08e43b9881ca0d76168428e24fffd8fbb",
-    "/main-es2015.4cc1a38b869e12a70d3c.js": "f6faa7b1202914171a7f144eb7b619f907abf7ee",
-    "/main-es5.4cc1a38b869e12a70d3c.js": "e84c86414ccddbc1ecdc22dd7adef5688fd797d9",
-    "/manifest.webmanifest": "57b288b17eba75231445e97e9b592e5e652b1ad8",
+    "/index.html": "3f0982909b65cc6cf82126c626f7290fa3dfd026",
+    "/main-es2015.96f2fce5b1e867c957a4.js": "aed98825e56c007110ea401f0dfb927038856fff",
+    "/main-es5.96f2fce5b1e867c957a4.js": "2d234d9756a9757ffb601fe5c0f3ef20ac90672f",
+    "/manifest.webmanifest": "78a4c1e8b7f501c6bd1f82b0beb5fcb9c1462071",
     "/polyfills-es2015.b28caabf4fa861007eeb.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/polyfills-es5.cb4329a3c9e990575ef8.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
     "/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
