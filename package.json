@@ -6,7 +6,7 @@
     "ng": "ng",
     "docs": "http-server -p 8080 -c-1 docs",
     "start": "ng serve",
-    "build": "ng build --prod --output-path docs --base-href",
+    "build": "ng build --prod --output-path docs --base-href /mcj-guessnumber/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
