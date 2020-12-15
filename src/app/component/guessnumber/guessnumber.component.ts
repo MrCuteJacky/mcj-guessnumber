@@ -39,7 +39,6 @@ export class GuessnumberComponent implements OnInit {
 
     ngOnInit(): void {
         this.init();
-        this.notificationService.register();
     }
 
     init(): void {
