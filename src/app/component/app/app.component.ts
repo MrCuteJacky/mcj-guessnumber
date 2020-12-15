@@ -12,21 +12,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.notificationService.register();
-
-    navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
-      serviceWorkerRegistration.addEventListener('statechange', event => {
-        console.log('statechange', event);
-      });
-      serviceWorkerRegistration.addEventListener('install', event => {
-        console.log('install', event);
-      });
-      serviceWorkerRegistration.addEventListener('activate', event => {
-        console.log('activate', event);
-      });
-      serviceWorkerRegistration.addEventListener('fetch', event => {
-        console.log('fetch', event);
-      });
-    });
   }
 
 }
