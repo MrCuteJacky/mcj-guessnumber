@@ -8,7 +8,7 @@
   "start_url": "./",
   "icons": [
     {
-      "src": "assets/icons/icon.png",
+      "src": "/mcj-guessnumber/assets/icons/icon.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
