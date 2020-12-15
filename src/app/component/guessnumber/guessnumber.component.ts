@@ -35,6 +35,7 @@ export class GuessnumberComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let promise = Notification.requestPermission();
     this.init();
   }
 
@@ -43,6 +44,10 @@ export class GuessnumberComponent implements OnInit {
     this.guessnumberService.generator();
     $('#toast').hide();
     $('#canvas-container').hide();
+
+    const icon = 'assets/images/logo.png';
+    const text = '密碼是 ' + this.guessnumberService.getAnswer();
+    const notification = new Notification('提示', { body: text, icon: icon });
   }
 
   validate(): void {

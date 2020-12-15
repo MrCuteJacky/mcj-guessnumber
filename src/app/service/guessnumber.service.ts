@@ -23,6 +23,10 @@ export class GuessnumberService {
     console.log('Answer:', this.answer);
   }
 
+  getAnswer(): string {
+    return this.answer;
+  }
+
   validate(input: string): void {
 
     if (this.answer !== input) {
