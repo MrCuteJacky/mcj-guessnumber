@@ -6,12 +6,20 @@
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "categories": ["game", "github" "pwa"],
   "icons": [
     {
       "src": "/mcj-guessnumber/assets/icons/icon.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/mcj-guessnumber/assets/images/screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/webp"
     }
   ]
 }
