@@ -1,9 +1,12 @@
 {
   "name": "終極密碼",
   "short_name": "終極密碼",
+  "description": "經典的猜數字小遊戲，歡迎來挑戰！！！",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "display": "standalone",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "language": "chinese",
   "scope": "./",
   "start_url": "./",
   "categories": ["game", "github" "pwa"],
