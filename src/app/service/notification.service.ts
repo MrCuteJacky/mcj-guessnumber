@@ -19,7 +19,7 @@ export class NotificationService {
       }).then(pushSubscription => {
         console.log(pushSubscription);
       });
-      serviceWorkerRegistration.addEventListener('push', eventListenerOrEventListenerObject => {
+      self.addEventListener('push', eventListenerOrEventListenerObject => {
         console.log('push', eventListenerOrEventListenerObject);
       });
     });
