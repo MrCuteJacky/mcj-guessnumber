@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608079459863,
+  "timestamp": 1608080100317,
   "index": "/mcj-guessnumber/mcj-guessnumber/index.html",
   "assetGroups": [
     {
@@ -36,6 +36,8 @@
         "/mcj-guessnumber/assets/i18n/app_en.json",
         "/mcj-guessnumber/assets/i18n/app_zh.json",
         "/mcj-guessnumber/assets/icons/icon.png",
+        "/mcj-guessnumber/assets/icons/icon_72.png",
+        "/mcj-guessnumber/assets/icons/icon_96.png",
         "/mcj-guessnumber/assets/images/logo.png",
         "/mcj-guessnumber/assets/images/screenshot.png"
       ],
@@ -46,14 +48,16 @@
   "hashTable": {
     "/mcj-guessnumber/assets/i18n/app_en.json": "acb819ee5f375c1b62cc401f5002db60ab72b9c8",
     "/mcj-guessnumber/assets/i18n/app_zh.json": "132df59ee0d8e2548aedfeca9c8f91a22dc6a636",
-    "/mcj-guessnumber/assets/icons/icon.png": "d06fa9764ba532d3f36d69fe05bdf9fcd8172cca",
+    "/mcj-guessnumber/assets/icons/icon.png": "d4d46a328e074aeb7760de57cff70c4f7d8b6abf",
+    "/mcj-guessnumber/assets/icons/icon_72.png": "89caa2cf00a938a124f73f8c945162729d36fb1e",
+    "/mcj-guessnumber/assets/icons/icon_96.png": "d4d46a328e074aeb7760de57cff70c4f7d8b6abf",
     "/mcj-guessnumber/assets/images/logo.png": "324f3951d410a4f4d4c24e3d2661143189b076ee",
     "/mcj-guessnumber/assets/images/screenshot.png": "9efff6342a5278be9f2875061a8102731cb8500b",
     "/mcj-guessnumber/favicon.ico": "408b2a5ffb223ea83abdaff3d02dcec358448997",
     "/mcj-guessnumber/index.html": "033485f78f503ad6f5a3bb405d5045e036df954f",
     "/mcj-guessnumber/main-es2015.9b0c552dea0e8d91ee6a.js": "30cb4cc9eb0173eb03e18a1a41fbe0b57501d8fb",
     "/mcj-guessnumber/main-es5.9b0c552dea0e8d91ee6a.js": "fb344b03afe3ef12e49de40513d815fe1f9b1c10",
-    "/mcj-guessnumber/manifest.webmanifest": "62e107af5cc392e4e15cafbfe9afa39f59f162ea",
+    "/mcj-guessnumber/manifest.webmanifest": "0a573e7f1faa75e495a17dd50e9747c5a32e4d2a",
     "/mcj-guessnumber/polyfills-es2015.b28caabf4fa861007eeb.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/mcj-guessnumber/polyfills-es5.cb4329a3c9e990575ef8.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
     "/mcj-guessnumber/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

@@ -7,12 +7,12 @@
   "display": "fullscreen",
   "orientation": "portrait",
   "lang": "zh_TW",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "https://mrcutejacky.github.io/mcj-guessnumber/",
+  "start_url": "https://mrcutejacky.github.io/mcj-guessnumber/",
   "categories": ["game", "github", "pwa"],
   "icons": [
     {
-      "src": "/mcj-guessnumber/assets/icons/icon.png",
+      "src": "/mcj-guessnumber/assets/icons/icon_72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
@@ -21,7 +21,7 @@
   "screenshots": [
     {
       "src": "/mcj-guessnumber/assets/images/screenshot.png",
-      "sizes": "1280x720",
+      "sizes": "960x520",
       "type": "image/png"
     }
   ],
@@ -33,8 +33,8 @@
       "url": "/",
       "icons": [
         {
-          "src": "/mcj-guessnumber/assets/icons/icon.png",
-          "sizes": "72x72"
+          "src": "/mcj-guessnumber/assets/icons/icon_96.png",
+          "sizes": "96x96"
         }
       ]
     }
