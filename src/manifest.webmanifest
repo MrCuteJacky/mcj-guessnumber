@@ -8,7 +8,7 @@
   "orientation": "portrait",
   "lang": "zh_TW",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/mcj-guessnumber",
   "categories": ["game", "github", "pwa"],
   "icons": [
     {

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608080809466,
+  "timestamp": 1608080944950,
   "index": "/mcj-guessnumber/mcj-guessnumber/index.html",
   "assetGroups": [
     {
@@ -57,7 +57,7 @@
     "/mcj-guessnumber/index.html": "033485f78f503ad6f5a3bb405d5045e036df954f",
     "/mcj-guessnumber/main-es2015.9b0c552dea0e8d91ee6a.js": "30cb4cc9eb0173eb03e18a1a41fbe0b57501d8fb",
     "/mcj-guessnumber/main-es5.9b0c552dea0e8d91ee6a.js": "fb344b03afe3ef12e49de40513d815fe1f9b1c10",
-    "/mcj-guessnumber/manifest.webmanifest": "e7ca4baa30368b075585fb04293f34e28c92ac7d",
+    "/mcj-guessnumber/manifest.webmanifest": "264294d7d0f51981e28667c9120835b000f77a49",
     "/mcj-guessnumber/polyfills-es2015.b28caabf4fa861007eeb.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/mcj-guessnumber/polyfills-es5.cb4329a3c9e990575ef8.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
     "/mcj-guessnumber/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
