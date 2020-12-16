@@ -10,6 +10,7 @@
   "scope": "/mcj-guessnumber/",
   "start_url": "/mcj-guessnumber/",
   "categories": ["game", "github", "pwa"],
+  "url": "https://mrcutejacky.github.io/mcj-guessnumber/",
   "icons": [
     {
       "src": "/mcj-guessnumber/assets/icons/icon_72.png",
@@ -48,7 +49,7 @@
       "name": "終極密碼",
       "short_name": "終極密碼",
       "description": "經典的猜數字小遊戲，歡迎來挑戰！！！",
-      "url": "/mcj-guessnumber",
+      "url": "/mcj-guessnumber/",
       "icons": [
         {
           "src": "/mcj-guessnumber/assets/icons/icon_96.png",
