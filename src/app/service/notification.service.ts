@@ -13,11 +13,14 @@ export class NotificationService {
     });
 
     navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
+      serviceWorkerRegistration.pushManager.getSubscription().then(pushSubscription => {
+        console.log('get', pushSubscription);
+      });
       serviceWorkerRegistration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: this.urlB64ToUint8Array('BGZLRvtyQGmoeKhM38KvOpauQ060CfT8Vb21vg7NEC8JyDvTqWZKIztUD33ebWaF46kyjh6q8L5uOsTq1cuP2LA')
       }).then(pushSubscription => {
-        console.log(pushSubscription);
+        console.log('subscribe', pushSubscription);
       });
       self.addEventListener('push', eventListenerOrEventListenerObject => {
         console.log('push', eventListenerOrEventListenerObject);
