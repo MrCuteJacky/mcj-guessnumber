@@ -4,11 +4,11 @@
   "description": "經典的猜數字小遊戲，歡迎來挑戰！！！",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "lang": "zh_TW",
-  "scope": "https://mrcutejacky.github.io/mcj-guessnumber/",
-  "start_url": "https://mrcutejacky.github.io/mcj-guessnumber/",
+  "scope": "/",
+  "start_url": "/",
   "categories": ["game", "github", "pwa"],
   "icons": [
     {
@@ -30,7 +30,7 @@
       "name": "終極密碼",
       "short_name": "終極密碼",
       "description": "經典的猜數字小遊戲，歡迎來挑戰！！！",
-      "url": "/",
+      "url": "/mcj-guessnumber",
       "icons": [
         {
           "src": "/mcj-guessnumber/assets/icons/icon_96.png",
