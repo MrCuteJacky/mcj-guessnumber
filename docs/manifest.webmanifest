@@ -24,5 +24,19 @@
       "sizes": "1280x720",
       "type": "image/png"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "終極密碼",
+      "short_name": "終極密碼",
+      "description": "經典的猜數字小遊戲，歡迎來挑戰！！！",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/mcj-guessnumber/assets/icons/icon.png",
+          "sizes": "72x72"
+        }
+      ]
+    }
   ]
 }
