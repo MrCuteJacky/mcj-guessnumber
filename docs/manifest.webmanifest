@@ -16,6 +16,24 @@
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
+    },
+    {
+      "src": "/mcj-guessnumber/assets/icons/icon_96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/mcj-guessnumber/assets/icons/icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/mcj-guessnumber/assets/icons/icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
     }
   ],
   "screenshots": [
@@ -35,6 +53,14 @@
         {
           "src": "/mcj-guessnumber/assets/icons/icon_96.png",
           "sizes": "96x96"
+        },
+        {
+          "src": "/mcj-guessnumber/assets/icons/icon_192.png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/mcj-guessnumber/assets/icons/icon_512.png",
+          "sizes": "512x512"
         }
       ]
     }
