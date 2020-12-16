@@ -6,10 +6,10 @@
   "background_color": "#000000",
   "display": "fullscreen",
   "orientation": "portrait",
-  "language": "chinese",
+  "lang": "zh_TW",
   "scope": "./",
   "start_url": "./",
-  "categories": ["game", "github" "pwa"],
+  "categories": ["game", "github", "pwa"],
   "icons": [
     {
       "src": "/mcj-guessnumber/assets/icons/icon.png",
@@ -22,7 +22,7 @@
     {
       "src": "/mcj-guessnumber/assets/images/screenshot.png",
       "sizes": "1280x720",
-      "type": "image/webp"
+      "type": "image/png"
     }
   ]
 }
