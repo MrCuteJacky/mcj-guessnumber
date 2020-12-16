@@ -12,18 +12,18 @@ export class NotificationService {
       this.notify('系統訊息', '註冊通知成功.');
     });
 
-    navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
-      serviceWorkerRegistration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: this.urlB64ToUint8Array('BGZLRvtyQGmoeKhM38KvOpauQ060CfT8Vb21vg7NEC8JyDvTqWZKIztUD33ebWaF46kyjh6q8L5uOsTq1cuP2LA')
-      }).then(pushSubscription => {
-        console.log(pushSubscription);
-      });
-      serviceWorkerRegistration.addEventListener('push', eventListenerOrEventListenerObject => {
-        console.log('push', eventListenerOrEventListenerObject);
-        // serviceWorkerRegistration.showNotification(eventListenerOrEventListenerObject.data.json().title, eventListenerOrEventListenerObject.data.json());
-      });
-    });
+    // navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
+    //   serviceWorkerRegistration.pushManager.subscribe({
+    //     userVisibleOnly: true,
+    //     applicationServerKey: this.urlB64ToUint8Array('BGZLRvtyQGmoeKhM38KvOpauQ060CfT8Vb21vg7NEC8JyDvTqWZKIztUD33ebWaF46kyjh6q8L5uOsTq1cuP2LA')
+    //   }).then(pushSubscription => {
+    //     console.log(pushSubscription);
+    //   });
+    //   serviceWorkerRegistration.addEventListener('push', eventListenerOrEventListenerObject => {
+    //     console.log('push', eventListenerOrEventListenerObject);
+    //     // serviceWorkerRegistration.showNotification(eventListenerOrEventListenerObject.data.json().title, eventListenerOrEventListenerObject.data.json());
+    //   });
+    // });
   }
 
   notify(title: string, body: string): void {
