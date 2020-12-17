@@ -15,6 +15,7 @@ export class NotificationService {
       serverPublicKey: this.serverPublicKey
     }).then(pushSubscription => {
       console.log(pushSubscription);
+      this.notify('系統訊息', '註冊通知成功.');
     }).catch(error => {
       console.error(error);
     });
