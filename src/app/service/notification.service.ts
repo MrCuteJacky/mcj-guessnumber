@@ -16,11 +16,11 @@ export class NotificationService {
             serverPublicKey: this.serverPublicKey
         }).then(pushSubscription => {
             console.log(JSON.stringify(pushSubscription));
-            this.notify('系統訊息', '註冊通知成功v1.');
+            this.notify('系統訊息', '註冊通知成功v2.');
         }).catch(error => {
             console.error(error);
         });
-        // self.addEventListener('push', event => console.log(event));
+        self.addEventListener('push', event => console.log(event));
     }
 
     notify(title: string, body: string): void {
