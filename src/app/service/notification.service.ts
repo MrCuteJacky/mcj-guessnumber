@@ -19,9 +19,10 @@ export class NotificationService {
     }).catch(error => {
       console.error(error);
     });
-    // Notification.requestPermission().then(notificationPermission => {
-    //   this.notify('系統訊息', '註冊通知成功.');
-    // });
+
+    self.addEventListener('push', (event) => {
+      console.log(event);
+    });
   }
 
   notify(title: string, body: string): void {
