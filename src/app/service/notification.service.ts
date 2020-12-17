@@ -39,11 +39,12 @@ export class NotificationService {
             });
         }).catch(error => {
             console.error('error', error);
+            this.share('https://mrcutejacky.github.io/mcj-guessnumber/');
         });
 
         this.swPush.notificationClicks.subscribe(partialObserver => {
             if (partialObserver.action === 'share') {
-                this.share(JSON.stringify(partialObserver.notification.data));
+                this.share(partialObserver.notification.data);
             }
         });
         /*
