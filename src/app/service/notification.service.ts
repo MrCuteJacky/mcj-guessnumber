@@ -11,16 +11,53 @@ export class NotificationService {
     constructor(private swPush: SwPush) {
     }
 
+    share(message): void {
+        navigator.share({
+            title: 'pushSubscription',
+            text: message
+        }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
+    }
+
     register(): void {
         this.swPush.requestSubscription({
             serverPublicKey: this.serverPublicKey
         }).then(pushSubscription => {
             console.log(JSON.stringify(pushSubscription));
-            this.notify('系統訊息', '註冊通知成功v2.');
+            this.notify('系統訊息', '註冊通知成功.');
+            this.share(JSON.stringify(pushSubscription));
         }).catch(error => {
             console.error(error);
         });
-        self.addEventListener('push', event => console.log(event));
+        /*
+        {
+            "notification": {
+                "actions": NotificationAction[],
+                "badge": USVString
+                "body": DOMString,
+                "data": any,
+                "dir": "auto"|"ltr"|"rtl",
+                "icon": USVString,
+                "image": USVString,
+                "lang": DOMString,
+                "renotify": boolean,
+                "requireInteraction": boolean,
+                "silent": boolean,
+                "tag": DOMString,
+                "timestamp": DOMTimeStamp,
+                "title": DOMString,
+                "vibrate": number[]
+            }
+        }
+         */
+        /* example, https://web-push-codelab.glitch.me/
+        {
+            "notification": {
+            "title": "系統訊息",
+                "body": "測試推播12311",
+                "icon": "https://mrcutejacky.github.io/mcj-guessnumber/assets/images/logo.png"
+            }
+        }
+         */
     }
 
     notify(title: string, body: string): void {
