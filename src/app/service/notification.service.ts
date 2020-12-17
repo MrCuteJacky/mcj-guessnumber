@@ -6,7 +6,7 @@ import {SwPush} from '@angular/service-worker';
 })
 export class NotificationService {
 
-  serverPublicKey = 'BGZLRvtyQGmoeKhM38KvOpauQ060CfT8Vb21vg7NEC8JyDvTqWZKIztUD33ebWaF46kyjh6q8L5uOsTq1cuP2LA';
+  serverPublicKey = 'BLZim1zgHOWGWAEI27u_Detz69HjpxOrSzVH9Rm4us71RuBU_YZ-hoO2mDgLb3cqg9o-HI0WCwtRpWzgShWuyHw';
 
   constructor(private swPush: SwPush) { }
 
