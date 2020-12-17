@@ -1,37 +1,53 @@
 import { Injectable } from '@angular/core';
+import {SwPush} from '@angular/service-worker';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotificationService {
 
-  constructor() { }
+  serverPublicKey = 'BGZLRvtyQGmoeKhM38KvOpauQ060CfT8Vb21vg7NEC8JyDvTqWZKIztUD33ebWaF46kyjh6q8L5uOsTq1cuP2LA';
+
+  constructor(private swPush: SwPush) { }
 
   register(): void {
-    Notification.requestPermission().then(notificationPermission => {
-      this.notify('系統訊息', '註冊通知成功.');
+    this.swPush.requestSubscription({
+      serverPublicKey: this.serverPublicKey
+    }).then(pushSubscription => {
+      console.log(pushSubscription);
+    }).catch(error => {
+      console.error(error);
     });
-
-    navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
-      serviceWorkerRegistration.pushManager.getSubscription().then(pushSubscription => {
-        console.log('get', pushSubscription);
-      });
-      serviceWorkerRegistration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: this.urlB64ToUint8Array('BGZLRvtyQGmoeKhM38KvOpauQ060CfT8Vb21vg7NEC8JyDvTqWZKIztUD33ebWaF46kyjh6q8L5uOsTq1cuP2LA')
-      }).then(pushSubscription => {
-        console.log('subscribe', pushSubscription);
-      });
-      self.addEventListener('push', eventListenerOrEventListenerObject => {
-        console.log('push', eventListenerOrEventListenerObject);
-      });
-    });
+    // Notification.requestPermission().then(notificationPermission => {
+    //   this.notify('系統訊息', '註冊通知成功.');
+    // });
   }
 
   notify(title: string, body: string): void {
-    navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
-      serviceWorkerRegistration.showNotification(title, {body: body, icon: 'assets/images/logo.png'}).then();
-    });
+    if (Notification.permission === 'granted') {
+      navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
+        // actions?: NotificationAction[];
+        // badge?: string;
+        // body?: string;
+        // data?: any;
+        // dir?: NotificationDirection;
+        // icon?: string;
+        // image?: string;
+        // lang?: string;
+        // renotify?: boolean;
+        // requireInteraction?: boolean;
+        // silent?: boolean;
+        // tag?: string;
+        // timestamp?: number;
+        // vibrate?: VibratePattern;
+        const options: NotificationOptions = {
+          body,
+          icon: 'assets/images/logo.png',
+          timestamp: Date.now()
+        };
+        serviceWorkerRegistration.showNotification(title, options).then();
+      });
+    }
   }
 
   urlB64ToUint8Array(base64String: string): Uint8Array {
