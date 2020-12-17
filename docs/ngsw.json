@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608184086512,
+  "timestamp": 1608184709506,
   "index": "/mcj-guessnumber/mcj-guessnumber/index.html",
   "assetGroups": [
     {
@@ -35,8 +35,6 @@
       "urls": [
         "/mcj-guessnumber/assets/i18n/app_en.json",
         "/mcj-guessnumber/assets/i18n/app_zh.json",
-        "/mcj-guessnumber/assets/icons/icon.png",
-        "/mcj-guessnumber/assets/icons/icon.svg",
         "/mcj-guessnumber/assets/icons/icon_192.png",
         "/mcj-guessnumber/assets/icons/icon_512.png",
         "/mcj-guessnumber/assets/icons/icon_72.png",
@@ -51,19 +49,17 @@
   "hashTable": {
     "/mcj-guessnumber/assets/i18n/app_en.json": "acb819ee5f375c1b62cc401f5002db60ab72b9c8",
     "/mcj-guessnumber/assets/i18n/app_zh.json": "132df59ee0d8e2548aedfeca9c8f91a22dc6a636",
-    "/mcj-guessnumber/assets/icons/icon.png": "d4d46a328e074aeb7760de57cff70c4f7d8b6abf",
-    "/mcj-guessnumber/assets/icons/icon.svg": "d2b4f9bf8342c21ef6c34483e3534744bf150a61",
-    "/mcj-guessnumber/assets/icons/icon_192.png": "0f1e359d9d27daa7e31cbcadb423412ba8cfbc51",
-    "/mcj-guessnumber/assets/icons/icon_512.png": "58317214300033979de23ecf545864357b49a50b",
-    "/mcj-guessnumber/assets/icons/icon_72.png": "89caa2cf00a938a124f73f8c945162729d36fb1e",
-    "/mcj-guessnumber/assets/icons/icon_96.png": "d4d46a328e074aeb7760de57cff70c4f7d8b6abf",
+    "/mcj-guessnumber/assets/icons/icon_192.png": "198c374d75945ed68fca0ffe9876008aed948647",
+    "/mcj-guessnumber/assets/icons/icon_512.png": "bc4aa7e7c30a883081f030b2cea82d58261f7498",
+    "/mcj-guessnumber/assets/icons/icon_72.png": "bc4aa7e7c30a883081f030b2cea82d58261f7498",
+    "/mcj-guessnumber/assets/icons/icon_96.png": "9a565886f65df61e324ceb30619f73a975eff67b",
     "/mcj-guessnumber/assets/images/logo.png": "324f3951d410a4f4d4c24e3d2661143189b076ee",
     "/mcj-guessnumber/assets/images/screenshot.png": "9efff6342a5278be9f2875061a8102731cb8500b",
     "/mcj-guessnumber/favicon.ico": "408b2a5ffb223ea83abdaff3d02dcec358448997",
-    "/mcj-guessnumber/index.html": "352f64271203c1581341ffe4894288a5acc32468",
+    "/mcj-guessnumber/index.html": "d718225740813dd97899ec3321f0847c1c64e9ff",
     "/mcj-guessnumber/main-es2015.4a1e919b47bb78cd84d3.js": "82270d08cd7ea1c215ffbd0bb7930e84e9d500e2",
     "/mcj-guessnumber/main-es5.4a1e919b47bb78cd84d3.js": "9a33972564d9ab353f0d7b6563d36cc12c06dac3",
-    "/mcj-guessnumber/manifest.webmanifest": "1e1db43ed7e3f0d74aa6e49e09f2f359b14c3c3e",
+    "/mcj-guessnumber/manifest.webmanifest": "42dd2fe35c08f722b94bfc45c8c48db13c3c7bef",
     "/mcj-guessnumber/polyfills-es2015.b28caabf4fa861007eeb.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/mcj-guessnumber/polyfills-es5.cb4329a3c9e990575ef8.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
     "/mcj-guessnumber/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

@@ -13,8 +13,28 @@
   "url": "https://mrcutejacky.github.io/mcj-guessnumber/",
   "icons": [
     {
-      "src": "/mcj-guessnumber/assets/icons/icon.svg",
-      "sizes": "any"
+      "src": "/mcj-guessnumber/assets/icons/icon_72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/mcj-guessnumber/assets/icons/icon_96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/mcj-guessnumber/assets/icons/icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/mcj-guessnumber/assets/icons/icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
     }
   ],
   "screenshots": [
@@ -32,8 +52,20 @@
       "url": "/mcj-guessnumber/",
       "icons": [
         {
-          "src": "/mcj-guessnumber/assets/icons/icon.svg",
-          "sizes": "any"
+          "src": "/mcj-guessnumber/assets/icons/icon_72.png",
+          "sizes": "72x72"
+        },
+        {
+          "src": "/mcj-guessnumber/assets/icons/icon_96.png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "/mcj-guessnumber/assets/icons/icon_192.png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/mcj-guessnumber/assets/icons/icon_512.png",
+          "sizes": "512x512"
         }
       ]
     }
