@@ -38,7 +38,7 @@ export class NotificationService {
                 ]
             });
         }).catch(error => {
-            console.error(error);
+            console.error('error', error);
         });
 
         this.swPush.notificationClicks.subscribe(partialObserver => {
