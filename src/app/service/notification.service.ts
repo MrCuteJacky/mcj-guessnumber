@@ -19,7 +19,6 @@ export class NotificationService {
             }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
         } else {
             console.log(message);
-            console.log(JSON.stringify(message));
         }
     }
 
@@ -32,9 +31,7 @@ export class NotificationService {
                 body: '註冊推播成功，請分享相關註冊訊息。',
                 icon: 'assets/images/logo.png',
                 timestamp: Date.now(),
-                data: {
-                    pushSubscription
-                },
+                data: JSON.stringify(pushSubscription),
                 actions: [
                     {action: 'share', title: 'share'},
                     {action: 'cancel', title: 'cancel'}
@@ -46,7 +43,7 @@ export class NotificationService {
 
         this.swPush.notificationClicks.subscribe(partialObserver => {
             if (partialObserver.action === 'share') {
-                this.share(JSON.stringify(partialObserver.notification.data.pushSubscription));
+                this.share(JSON.stringify(partialObserver.notification.data));
             }
         });
         /*
