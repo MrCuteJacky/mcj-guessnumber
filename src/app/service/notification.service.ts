@@ -12,10 +12,15 @@ export class NotificationService {
     }
 
     share(message): void {
-        navigator.share({
-            title: 'pushSubscription',
-            text: message
-        }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
+        if (navigator.share) {
+            navigator.share({
+                title: 'pushSubscription',
+                text: message
+            }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log(message);
+            console.log(JSON.stringify(message));
+        }
     }
 
     register(): void {
@@ -23,10 +28,26 @@ export class NotificationService {
             serverPublicKey: this.serverPublicKey
         }).then(pushSubscription => {
             console.log(JSON.stringify(pushSubscription));
-            this.notify('系統訊息', '註冊通知成功.');
-            this.share(JSON.stringify(pushSubscription));
+            this.notify('系統訊息', {
+                body: '註冊推播成功，請分享相關註冊訊息。',
+                icon: 'assets/images/logo.png',
+                timestamp: Date.now(),
+                data: {
+                    pushSubscription
+                },
+                actions: [
+                    {action: 'share', title: 'share'},
+                    {action: 'cancel', title: 'cancel'}
+                ]
+            });
         }).catch(error => {
             console.error(error);
+        });
+
+        this.swPush.notificationClicks.subscribe(partialObserver => {
+            if (partialObserver.action === 'share') {
+                this.share(JSON.stringify(partialObserver.notification.data.pushSubscription));
+            }
         });
         /*
         {
@@ -60,7 +81,7 @@ export class NotificationService {
          */
     }
 
-    notify(title: string, body: string): void {
+    notify(title: string, data: string | NotificationOptions): void {
         if (Notification.permission === 'granted') {
             navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
                 // actions?: NotificationAction[];
@@ -77,11 +98,16 @@ export class NotificationService {
                 // tag?: string;
                 // timestamp?: number;
                 // vibrate?: VibratePattern;
-                const options: NotificationOptions = {
-                    body,
-                    icon: 'assets/images/logo.png',
-                    timestamp: Date.now()
-                };
+                let options: NotificationOptions;
+                if (typeof data === 'string') {
+                    options = {
+                        body: data,
+                        icon: 'assets/images/logo.png',
+                        timestamp: Date.now()
+                    };
+                } else {
+                    options = data;
+                }
                 serviceWorkerRegistration.showNotification(title, options).then();
             });
         }
