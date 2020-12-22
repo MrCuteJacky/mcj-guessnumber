@@ -11,14 +11,14 @@ export class NotificationService {
     constructor(private swPush: SwPush) {
     }
 
-    share(message): void {
+    share(data): void {
         if (navigator.share) {
             navigator.share({
                 title: 'pushSubscription',
-                text: message
+                text: JSON.stringify(data)
             }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
         } else {
-            console.log(JSON.stringify(message));
+            console.log(JSON.stringify(data));
         }
     }
 
