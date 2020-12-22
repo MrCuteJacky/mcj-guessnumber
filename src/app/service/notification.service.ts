@@ -15,10 +15,10 @@ export class NotificationService {
         if (navigator.share) {
             navigator.share({
                 title: 'pushSubscription',
-                text: JSON.stringify(data)
+                text: data
             }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
         } else {
-            console.log(JSON.stringify(data));
+            console.log(data);
         }
     }
 
@@ -31,7 +31,7 @@ export class NotificationService {
                 body: '註冊推播成功，請分享相關註冊訊息。',
                 icon: 'assets/images/logo.png',
                 timestamp: Date.now(),
-                data: pushSubscription,
+                data: JSON.stringify(pushSubscription),
                 actions: [
                     {action: 'share', title: 'share'},
                     {action: 'cancel', title: 'cancel'}
