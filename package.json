@@ -26,7 +26,6 @@
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "bootstrap": "4.5.3",
-    "bootstrap-icons": "^1.2.1",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "popper.js": "^1.16.1",

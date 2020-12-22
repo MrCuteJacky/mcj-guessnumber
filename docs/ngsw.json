@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608617724941,
+  "timestamp": 1608618838948,
   "index": "/mcj-guessnumber/index.html",
   "assetGroups": [
     {
@@ -13,8 +13,8 @@
       "urls": [
         "/mcj-guessnumber/favicon.ico",
         "/mcj-guessnumber/index.html",
-        "/mcj-guessnumber/main-es2015.e0643f3a33ce6c06f160.js",
-        "/mcj-guessnumber/main-es5.e0643f3a33ce6c06f160.js",
+        "/mcj-guessnumber/main-es2015.7e6e76a264a1bc958d57.js",
+        "/mcj-guessnumber/main-es5.7e6e76a264a1bc958d57.js",
         "/mcj-guessnumber/manifest.webmanifest",
         "/mcj-guessnumber/polyfills-es2015.b28caabf4fa861007eeb.js",
         "/mcj-guessnumber/polyfills-es5.cb4329a3c9e990575ef8.js",
@@ -47,8 +47,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/mcj-guessnumber/assets/i18n/app_en.json": "acb819ee5f375c1b62cc401f5002db60ab72b9c8",
-    "/mcj-guessnumber/assets/i18n/app_zh.json": "132df59ee0d8e2548aedfeca9c8f91a22dc6a636",
+    "/mcj-guessnumber/assets/i18n/app_en.json": "a1c6f814326017bf1095e351934b58c26b44b3e9",
+    "/mcj-guessnumber/assets/i18n/app_zh.json": "7a67e60d7f2d7d16dfb61671e806521072f64e04",
     "/mcj-guessnumber/assets/icons/icon_192.png": "198c374d75945ed68fca0ffe9876008aed948647",
     "/mcj-guessnumber/assets/icons/icon_512.png": "bc4aa7e7c30a883081f030b2cea82d58261f7498",
     "/mcj-guessnumber/assets/icons/icon_72.png": "bc4aa7e7c30a883081f030b2cea82d58261f7498",
@@ -56,9 +56,9 @@
     "/mcj-guessnumber/assets/images/logo.png": "324f3951d410a4f4d4c24e3d2661143189b076ee",
     "/mcj-guessnumber/assets/images/screenshot.png": "9efff6342a5278be9f2875061a8102731cb8500b",
     "/mcj-guessnumber/favicon.ico": "408b2a5ffb223ea83abdaff3d02dcec358448997",
-    "/mcj-guessnumber/index.html": "c039a71e904230fe7f259024fd3652e5cd9bf57f",
-    "/mcj-guessnumber/main-es2015.e0643f3a33ce6c06f160.js": "3df3dd4cdffc8f2604086f336f7e6aff9d28169e",
-    "/mcj-guessnumber/main-es5.e0643f3a33ce6c06f160.js": "0d3b3fd84733e49c1d873c7ea1aeeddc4c63ba10",
+    "/mcj-guessnumber/index.html": "1d85b4deacb06667510d88c70b8106ebcccba627",
+    "/mcj-guessnumber/main-es2015.7e6e76a264a1bc958d57.js": "076ca271fe873ef2e4f545295b1b3d8e5bcc55dd",
+    "/mcj-guessnumber/main-es5.7e6e76a264a1bc958d57.js": "588f998a7946388ae0ce737eccc911222e5b8cf6",
     "/mcj-guessnumber/manifest.webmanifest": "42dd2fe35c08f722b94bfc45c8c48db13c3c7bef",
     "/mcj-guessnumber/polyfills-es2015.b28caabf4fa861007eeb.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/mcj-guessnumber/polyfills-es5.cb4329a3c9e990575ef8.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
