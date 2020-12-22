@@ -18,7 +18,7 @@ export class NotificationService {
                 text: message
             }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
         } else {
-            console.log(message);
+            console.log(JSON.stringify(message));
         }
     }
 
@@ -31,7 +31,7 @@ export class NotificationService {
                 body: '註冊推播成功，請分享相關註冊訊息。',
                 icon: 'assets/images/logo.png',
                 timestamp: Date.now(),
-                data: JSON.stringify(pushSubscription),
+                data: pushSubscription,
                 actions: [
                     {action: 'share', title: 'share'},
                     {action: 'cancel', title: 'cancel'}
@@ -47,32 +47,11 @@ export class NotificationService {
                 this.share(partialObserver.notification.data);
             }
         });
-        /*
-        {
-            "notification": {
-                "actions": NotificationAction[],
-                "badge": USVString
-                "body": DOMString,
-                "data": any,
-                "dir": "auto"|"ltr"|"rtl",
-                "icon": USVString,
-                "image": USVString,
-                "lang": DOMString,
-                "renotify": boolean,
-                "requireInteraction": boolean,
-                "silent": boolean,
-                "tag": DOMString,
-                "timestamp": DOMTimeStamp,
-                "title": DOMString,
-                "vibrate": number[]
-            }
-        }
-         */
         /* example, https://web-push-codelab.glitch.me/
         {
             "notification": {
             "title": "系統訊息",
-                "body": "測試推播12311",
+                "body": "測試推播",
                 "icon": "https://mrcutejacky.github.io/mcj-guessnumber/assets/images/logo.png"
             }
         }
@@ -82,20 +61,6 @@ export class NotificationService {
     notify(title: string, data: string | NotificationOptions): void {
         if (Notification.permission === 'granted') {
             navigator.serviceWorker.getRegistration().then(serviceWorkerRegistration => {
-                // actions?: NotificationAction[];
-                // badge?: string;
-                // body?: string;
-                // data?: any;
-                // dir?: NotificationDirection;
-                // icon?: string;
-                // image?: string;
-                // lang?: string;
-                // renotify?: boolean;
-                // requireInteraction?: boolean;
-                // silent?: boolean;
-                // tag?: string;
-                // timestamp?: number;
-                // vibrate?: VibratePattern;
                 let options: NotificationOptions;
                 if (typeof data === 'string') {
                     options = {
@@ -109,20 +74,5 @@ export class NotificationService {
                 serviceWorkerRegistration.showNotification(title, options).then();
             });
         }
-    }
-
-    urlB64ToUint8Array(base64String: string): Uint8Array {
-        const padding = '='.repeat((4 - base64String.length % 4) % 4);
-        const base64 = (base64String + padding)
-            .replace(/\-/g, '+')
-            .replace(/_/g, '/');
-
-        const rawData = window.atob(base64);
-        const outputArray = new Uint8Array(rawData.length);
-
-        for (let i = 0; i < rawData.length; ++i) {
-            outputArray[i] = rawData.charCodeAt(i);
-        }
-        return outputArray;
     }
 }
